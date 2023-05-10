@@ -24,18 +24,18 @@ const Countries = () => {
             <div className="container">
                 {
                     data
-                    .filter(fi => (
-                        fi.population > 10000000
-                    ))
-                    .map((d) => (
-                        <div className="cart">
-                            <img key={d.flags.png} onClick={()=> navigate(`${d.flags.png}`)} src={d.flags.png} alt="" />
-                            <h2>{d.name.common}</h2>
-                            <p>Population:{d.population}</p>
-                            <p>Region:{d.region}</p>
-                            <p>Capital:{d.capital}</p>
-                        </div>
-                    ))
+                        .filter(fi => (
+                            fi.population > 10000000
+                        ))
+                        .map((d) => (
+                            <div className="cart">
+                                <img key={d.flags.png} onClick={() => navigate(`${d.flags.png}`)} src={d.flags.png} alt="" />
+                                <h2>{d.name.common}</h2>
+                                <p>Population:{d.population}</p>
+                                <p>Region:{d.region}</p>
+                                <p>Capital:{d.capital}</p>
+                            </div>
+                        ))
                 }
             </div>
         </>
