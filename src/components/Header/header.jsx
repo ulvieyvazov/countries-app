@@ -1,4 +1,4 @@
-import React, { useState }  from "react";
+import React, { useState } from "react";
 import "./header.css"
 // import { FaMoon } from "react-icons/fa";
 // import { ModeContext } from "../../tasks/task1/context/ModeContext"
@@ -7,8 +7,8 @@ import "./header.css"
 const Header = () => {
 
     const [dark, setDark] = useState()
-        
-        
+
+
     return (
         <>
             <div className="nav">
