@@ -9,9 +9,8 @@ function App() {
     <>
       <Header/>
       <Routes>
-        <Route path='/' element={<Countries />} >
-          <CatagoryDetail/>
-        </Route>
+        <Route path='/' element={<Countries />} ></Route>
+        <Route path='/name/:name' element={<CatagoryDetail/>}></Route>
       </Routes>
     </>
   );
