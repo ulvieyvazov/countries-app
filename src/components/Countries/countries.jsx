@@ -10,7 +10,6 @@ const Countries = () => {
   const getData = async () => {
     const res = await axios.get(`https://restcountries.com/v3.1/all`);
     setData(res.data);
-    console.log(res);
   };
 
   useEffect(() => {
@@ -25,7 +24,7 @@ const Countries = () => {
             <div className="cart">
               <img
                 key={d.name.common}
-                onClick={() => navigate(`/name${d.name.common}`)}
+                onClick={() => navigate(`name/:${d.name.common}`)}
                 src={d.flags.png}
                 alt=""
               />

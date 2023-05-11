@@ -12,16 +12,17 @@ const CatagoryDetail = () => {
         const res = await axios.get(`https://restcountries.com/v3.1/name/${params.name}`)
         setCatagory(res.data[0])
     }
+    console.log(catagory);
     
     useEffect(() => {
        getCata()
     }, [])
-
+    
 
     return (
         <>
             <div>
-                {catagory?.name?.common}
+                {catagory.name.common}
             </div>
         </>
     )

@@ -1,8 +1,30 @@
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
 }
 
-.active{
+.active {
     background-color: #000;
+}
+
+button {
+    width: 50px;
+    height: 100%;
+    padding: 5px 10px !important;
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dark {
+    background-color: #000;
+    color: #fff;
+}
+
+.light {
+    background-color: #fff;
+    color: #333;
 }
