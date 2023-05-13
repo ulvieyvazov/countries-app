@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./header.css"
 // import { FaMoon } from "react-icons/fa";
-// import { ModeContext } from "../../tasks/task1/context/ModeContext"
 
 
 const Header = () => {
@@ -35,6 +34,14 @@ const Header = () => {
                 </div>
                 <div className={`${dark}`}>
                     <button onClick={toggleDark}>{dark ? '🌙' : '☀'}</button>
+                    {/* <button onClick={() => {
+                        if (dark === 'light') {
+                            setDark('dark');
+                        } else {
+                            setDark('light');
+                        }
+                    setDark((pre) => !pre)
+                }} >{dark ? '🌙' : '☀'}</button> */}
                 </div>
             </div>
         </>

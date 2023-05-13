@@ -1,0 +1,24 @@
+.child-parent{
+    width: 100%;
+    margin: 0 auto;
+}
+.ad{
+    padding: 90px 0;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    align-items:center;
+}
+.flex div{
+    padding: 2px 0;
+}
+.back{
+    background-color: blue;
+    width: 120px;
+    height: 40px;
+    font-size:large;
+    color:white;
+    cursor: pointer;
+    border-radius: 18px;
+}
