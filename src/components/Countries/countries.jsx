@@ -33,6 +33,7 @@ const Countries = () => {
       {/* <input type="text" onChange={onCheck} /> */}
       <div className="container">
         {data
+          .filter(f => (f.population > 1))
           .map((d) => (
             <div className="cart">
               <img key={d.name.common} onClick={() => navigate(`name/${d.name.common}`)}

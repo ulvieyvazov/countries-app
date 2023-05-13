@@ -5,23 +5,23 @@ import "./header.css"
 
 const Header = () => {
 
-    const [dark, setDark] = useState(
+    const [darkmode, setDarkmode] = useState(
         localStorage.getItem('dark') || 'light'
     )
 
     const toggleDark = () => {
-        setDark((pre) => !pre)
-        if (dark === 'light') {
-            setDark('dark');
+        setDarkmode((pre) => !pre)
+        if (darkmode === 'light') {
+            setDarkmode('dark');
         } else {
-            setDark('light');
+            setDarkmode('light');
         }
     };
 
     useEffect(() => {
-        localStorage.setItem('dark', dark);
-        document.body.className = dark;
-    }, [dark]);
+        localStorage.setItem('dark', darkmode);
+        document.body.className = darkmode;
+    }, [darkmode]);
 
 
     return (
@@ -32,8 +32,8 @@ const Header = () => {
 
                     <h3>Where in the world?</h3>
                 </div>
-                <div className={`${dark}`}>
-                    <button onClick={toggleDark}>{dark ? '🌙' : '☀'}</button>
+                <div className={`${darkmode}`}>
+                    <button onClick={toggleDark}>{darkmode === "dark"? '🌙' : '☀'}</button>
                     {/* <button onClick={() => {
                         if (dark === 'light') {
                             setDark('dark');
