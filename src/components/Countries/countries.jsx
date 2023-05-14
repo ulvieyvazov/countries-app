@@ -8,32 +8,32 @@ const Countries = () => {
   const [data, setData] = useState([]);
   const [value, setValue] = useState("")
 
-  const getData = async () => {
-    const res = await axios.get(`https://restcountries.com/v3.1/all`);
-    setData(res.data);
-  };
   
-  const onCheck = (e) => {
-    data.filter(item => {
-      return item === "" ? item : item.name.common.toLowerCase().includes(value.toLowerCase()),
-      console.log(item.name.common);
-    })
-    setValue(e.target.value)
-    console.log(value);
-  }
+  // const onCheck = (e) => {
+  //   setValue(e.target.value)
+  //   console.log(value);
+  // }
 
-
-  useEffect(() => {
-    getData();
-  }, []);
+  
+  
+  
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const res = await axios.get(`https://restcountries.com/v3.1/all`);
+  //     setData(res.data);
+  //     setValue( data.filter(item =>item.name.common.toLowerCase().includes(value.toLowerCase())))
+  //     setValue(value);
+  //   };
+  //   getData();
+  // }, [value]);
 
 
   return (
     <>
-      {/* <input type="text" onChange={onCheck} /> */}
+      <input type="text" onChange={(e=>setValue(e.target.value))} />
       <div className="container">
         {data
-          .filter(f => (f.population > 1))
+          // .filter(f => (f.population > 10000000))
           .map((d) => (
             <div className="cart">
               <img key={d.name.common} onClick={() => navigate(`name/${d.name.common}`)}
