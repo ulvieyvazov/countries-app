@@ -8,6 +8,7 @@ const Countries = () => {
   const [value, setValue] = useState('');
   const [data, setData] = useState([]);
 
+  
   // const onCheck = (e) => {
   //   setValue(e.target.value)
   //   console.log(value);

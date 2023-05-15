@@ -22,3 +22,7 @@
     cursor: pointer;
     border-radius: 18px;
 }
+
+.flex div{
+    font-size: 18px;
+}
